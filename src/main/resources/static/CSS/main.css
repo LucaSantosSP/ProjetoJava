@@ -3,6 +3,10 @@
     padding: 0;
 }
 
+#logo{
+    width: 200px;
+}
+
 /*-------------------------Estilizando lateral retrátil-----------------------------*/
 #check{
     display: none;
@@ -66,16 +70,13 @@ main{
 }
 
 #destaques{
-    flex-wrap: wrap;
-    flex-grow: 9;
     background-color: #dddddd;
     margin: 20px;
     box-shadow: 2px 2px 6px rgba(0,0,0, 0.4);
+    width: 70%;
 }
 
 aside{
-    flex-wrap: wrap;
-    flex-grow: 1;
     background-color: #dddddd;
     margin: 20px;
     padding: 20px;
@@ -87,9 +88,4 @@ footer{
     padding-top: 13px;
     background-color: #718978;
     text-align: center;
-}
-
-#logo{
-    position: absolute;
-    left: 500px;;
 }
