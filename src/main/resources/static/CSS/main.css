@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*-------------------------Estilizando lateral retrátil-----------------------------*/
+#check{
+    display: none;
+}
+
+#icone{
+    cursor: pointer;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+}
+
+.barra{
+    background-color: rgb(53, 53, 53);
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    transition: all 0.2s linear;
+    left: -300px;
+}
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+}
+
+.menu li{
+    background-color: #49504a;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18pt;
+    transition: all .2s linear;
+    border-bottom: 2px solid #222;  
+    opacity: 0;
+    margin-top: 200px;
+}
+
+.menu li:hover{
+    background-color: #718978;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #f4f4f9;
+}
+
+#check:checked ~ .barra{
+    transform: translateX(300px);
+}
+
+#check:checked ~ .barra nav .menu li{
+    opacity: 1;
+    margin-top: 0;
+}
+
+/*-------------------------Estilizando corpo do projeto-----------------------------*/
+
+main{
+    display: flex;
+}
+
+#destaques{
+    flex-wrap: wrap;
+    flex-grow: 9;
+    background-color: #dddddd;
+    margin: 20px;
+    box-shadow: 2px 2px 6px rgba(0,0,0, 0.4);
+}
+
+aside{
+    flex-wrap: wrap;
+    flex-grow: 1;
+    background-color: #dddddd;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 2px 2px 6px rgba(0,0,0, 0.4);
+}
+
+footer{
+    clear: both;
+    padding-top: 13px;
+    background-color: #718978;
+    text-align: center;
+}
+
+#logo{
+    position: absolute;
+    left: 500px;;
+}

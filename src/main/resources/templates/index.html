@@ -4,17 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awere Stuff</title>
+    <link rel="stylesheet" href="/static/CSS/main.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul class="menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Produtos</a></li>
-                <li><a href="#">Contato</a></li>
-            </ul>
-        </nav>
+
+        <input type="checkbox" id="check">
+        <label id="icone" for="check"><img src="/static/Imagens/NavButtom.png" alt=""></label>
+
+        <div class="barra">
+            <nav>
+                <ul class="menu">
+                    <a href="#"><li>Home</li></a>
+                    <a href="#"><li>Sobre</li></a>
+                    <a href="#"><li>Produtos</li></a>
+                    <a href="#"><li>Contato</li></a>
+                </ul>
+            </nav>
+        </div>
 
         <img id="logo" src="/static/Imagens/Logo.png" alt="Logo">
 
@@ -23,38 +30,42 @@
 
     <img id="banner" src="/static/Imagens/Banner.png" alt="Banner">
 
+
     <main> 
-        <h1>Destaques</h1>
+        <div id="destaques">
+            <h1>Destaques</h1>
 
-        <div class="produto-destaque">
-            <img src="/static/Imagens/Produto.png" alt="Produto01">
-            <h3>Produto01</h3>
-            <p>Informações sobre o produto01</p>
+            <div class="produto-destaque">
+                <img src="/static/Imagens/Produto.png" alt="Produto01">
+                <h3>Produto01</h3>
+                <p>Informações sobre o produto01</p>
+            </div>
+
+            <div class="produto-destaque">
+                <img src="/static/Imagens/Produto.png" alt="Produto02">
+                <h3>Produto02</h3>
+                <p>Informações sobre o produto02</p>
+            </div>
+
+            <div class="produto-destaque">
+                <img src="/static/Imagens/Produto.png" alt="Produto03">
+                <h3>Produto03</h3>
+                <p>Informações sobre o produto03</p>
+            </div>
         </div>
 
-        <div class="produto-destaque">
-            <img src="/static/Imagens/Produto.png" alt="Produto02">
-            <h3>Produto02</h3>
-            <p>Informações sobre o produto02</p>
-        </div>
+        <aside>
+            <h2>Por que consumir produtos sustentáveis?</h2>
+            <ol class="motivos-sustentaveis">
+                <li>Menor uso de recursos naturais</li>
+                <li>Menor impacto no ambiente considerando o curto, médio e longo prazo</li>
+                <li>Menor investimento ao longo do tempo</li>
+                <li>Possibilidade de reutilizar o material</li>
+                <li>Maior qualidade de vida para as próximas gerações</li>
+            </ol>
 
-        <div class="produto-destaque">
-            <img src="/static/Imagens/Produto.png" alt="Produto03">
-            <h3>Produto03</h3>
-            <p>Informações sobre o produto03</p>
-        </div>
-    </main>
-
-    <aside>
-        <h2>Por que consumir produtos sustentáveis?</h2>
-        <ol class="motivos-sustentaveis">
-            <li>Motivo01</li>
-            <li>Motivo02</li>
-            <li>Motivo03</li>
-            <li>Motivo04</li>
-            <li>Motivo05</li>
-        </ol>
     </aside>
+    </main>
 
     <footer>
         Desenvolvido por: Caio Silva, Laryssa Lisboa e Lucas Beserra
