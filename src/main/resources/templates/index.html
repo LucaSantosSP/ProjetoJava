@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awere Stuff</title>
-    <link rel="stylesheet" href="/static/CSS/main.css">
+    <link rel="stylesheet" th:href="@{CSS/main.css}">
 </head>
 
 <body>
     <header>
 
         <input type="checkbox" id="check">
-        <label id="icone" for="check"><img src="/static/Imagens/NavButtom.png" alt=""></label>
+        <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
 
         <div class="barra">
             <nav>
@@ -34,12 +34,12 @@
         </div>
 
         <div id="logo-div">
-            <img id="logo" src="/static/Imagens/Logo.png" alt="Logo">
+            <img id="logo" th:src="@{Imagens/Logo.png}" alt="Logo">
         </div>
 
     </header>
 
-    <img id="banner" src="/static/Imagens/Banner.png" alt="Banner">
+    <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
 
     <ul class="menu-horizontal">
         <li><a href="#">Home</a></li>
@@ -54,7 +54,7 @@
 
             <div class="produto-destaque">
                 <div class="imagem">
-                    <img src="/static/Imagens/Produto1.png" alt="Produto01">
+                    <img th:src="@{Imagens/Produto1.png}" alt="Produto01">
                 </div>
                 <div class="texto">
                     <h3>Suco de Laranja Campo Largo</h3>
@@ -70,7 +70,7 @@
 
             <div class="produto-destaque">
                 <div class="imagem">
-                    <img src="/static/Imagens/Produto2.png" alt="Produto02">
+                    <img th:src="@{Imagens/Produto2.png}" alt="Produto02">
                 </div>
                 <div class="texto">
                     <h3>Kit Biquini neon + Bucket hat</h3>
@@ -89,7 +89,7 @@
 
             <div class="produto-destaque">
                 <div class="imagem">
-                    <img src="/static/Imagens/Produto3.png" alt="Produto03">
+                    <img th:src="@{Imagens/Produto3.png}" alt="Produto03">
                 </div>
                 <div class="texto">
                     <h3>Esfoliante Dermo Detox</h3>
