@@ -17,16 +17,16 @@
         <div class="barra">
             <nav>
                 <ul class="menu">
-                    <a href="#">
+                    <a th:href="@{/index}">
                         <li>Home</li>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/sobre}">
                         <li>Sobre</li>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/produtos}">
                         <li>Produtos</li>
                     </a>
-                    <a href="#">
+                    <a th:href="@{/contatos}">
                         <li>Contato</li>
                     </a>
                 </ul>
@@ -42,10 +42,10 @@
     <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
 
     <ul class="menu-horizontal">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Sobre</a></li>
-        <li><a href="#">Produtos</a></li>
-        <li><a href="#">Contatos</a></li>
+        <li><a th:href="@{/index}">Home</a></li>
+        <li><a th:href="@{/sobre}">Sobre</a></li>
+        <li><a th:href="@{/produtos}">Produtos</a></li>
+        <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
 
     <main>

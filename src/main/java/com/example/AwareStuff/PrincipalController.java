@@ -6,8 +6,24 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class PrincipalController {
 
-	@GetMapping("/")
+	@GetMapping("/index")
 	public String index() {
 		return "index";
 	}
+	
+	@GetMapping("/produtos")
+	public String produtos() {
+		return "produtos";
+	}
+	
+	@GetMapping("/sobre")
+	public String sobre() {
+		return "sobre";
+	}
+	
+	@GetMapping("/contatos")
+	public String contatos() {
+		return "contatos";
+	}
+
 }

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awere Stuff | Sobre</title>
+    <link rel="stylesheet" th:href="@{CSS/main.css}">
+</head>
+
+<body>
+    <header>
+
+        <input type="checkbox" id="check">
+        <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
+
+        <div class="barra">
+            <nav>
+                <ul class="menu">
+                    <a th:href="@{/index}">
+                        <li>Home</li>
+                    </a>
+                    <a th:href="@{/sobre}">
+                        <li>Sobre</li>
+                    </a>
+                    <a th:href="@{/produtos}">
+                        <li>Produtos</li>
+                    </a>
+                    <a th:href="@{/contatos}">
+                        <li>Contato</li>
+                    </a>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="logo-div">
+            <img id="logo" th:src="@{Imagens/Logo.png}" alt="Logo">
+        </div>
+
+    </header>
+
+    <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
+
+    <ul class="menu-horizontal">
+        <li><a th:href="@{/index}">Home</a></li>
+        <li><a th:href="@{/sobre}">Sobre</a></li>
+        <li><a th:href="@{/produtos}">Produtos</a></li>
+        <li><a th:href="@{/contatos}">Contatos</a></li>
+    </ul>
+    
+    <footer>
+        Desenvolvido por: Caio Silva, Laryssa Lisboa e Lucas Beserra
+    </footer>
+</body>
+
+</html>
