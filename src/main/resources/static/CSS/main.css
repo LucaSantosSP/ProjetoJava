@@ -6,7 +6,7 @@
     padding: 0;
 }
 
-#logo{
+#logo {
     width: 200px;
     margin: auto;
     display: block;
@@ -16,7 +16,7 @@
     transform: translate(-50%, -50%);
 }
 
-#botao-encontrar-produto:hover{
+#botao-encontrar-produto:hover {
     cursor: pointer;
     background-color: #394e3f;
     color: #ddd;
@@ -78,6 +78,52 @@ nav {
     margin-top: 0;
 }
 
+/*-------------------------Estilizando Menu Fixo-----------------------------*/
+.menu-horizontal {
+    background-color: #718978;
+    margin: 10px;
+    padding: 0;
+    width: 99%;
+    height: 50px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.menu-horizontal ul {
+    list-style: none;
+    text-align: center;
+}
+
+.menu-horizontal li {
+    display: inline;
+    float: left;
+    text-align: center;
+    margin: 10px;
+    border-left: #718978 thin solid;
+}
+
+.menu-horizontal a {
+    display: block;
+    text-decoration: none;
+    padding: 6px;
+    background-color: #718978;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}
+
+.menu-horizontal :hover {
+    border-radius: 5px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    background-color: #dddd;
+    text-decoration: none;
+    color: #05668d;
+    width: auto;
+    height: auto;
+}
+
 /*-------------------------Estilizando corpo do projeto-----------------------------*/
 
 #banner {
@@ -115,7 +161,7 @@ main {
     border-radius: 2px;
 }
 
-.imagem{
+.imagem {
     margin-bottom: 10px;
 }
 
@@ -145,6 +191,23 @@ aside {
     margin: 20px;
     padding: 20px;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+aside h2 {
+    font-size: 2.4em;
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    margin: 20px;
+    color: #394e3f;
+}
+
+.motivos-sustentaveis {
+    color: #000000;
+    font-size: 20px;
+    font-family: arial, sans-serif;
+    line-height: 1.6em;
+    margin: 20px;
+    text-align: justify;
 }
 
 /*-------------------------Estilizando Footer-----------------------------*/
