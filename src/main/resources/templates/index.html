@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awere Stuff</title>
+    <title>Awere Stuff | Home</title>
     <link rel="stylesheet" th:href="@{CSS/main.css}">
 </head>
 
@@ -14,6 +14,8 @@
         <input type="checkbox" id="check">
         <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
 
+        <a th:href="@{/register}" id="buttom-Register">Criar uma conta</a>
+    
         <div class="barra">
             <nav>
                 <ul class="menu">
@@ -41,12 +43,14 @@
 
     <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
 
+	<div id="menu-horizontal-div">
     <ul class="menu-horizontal">
         <li><a th:href="@{/index}">Home</a></li>
         <li><a th:href="@{/sobre}">Sobre</a></li>
         <li><a th:href="@{/produtos}">Produtos</a></li>
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
+    </div>
 
     <main>
         <div id="destaques">

@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Righteous&family=Roboto+Flex:opsz@8..144&family=Sarala&display=swap');
+
+#banner{
+	height: 50px;
+	margin-top: 6px;
+	margin-bottom: 40px;
+}
+
+form{
+    text-align:center;
+    margin-top: 4%;
+}
+
+h1{
+	color: #394e3f;
+	font-family: 'Roboto Flex', sans-serif;
+}
+
+p{
+    margin-bottom: 25px;
+}
+
+input{
+	font-size: 17px;
+    margin-bottom: 10px;
+    padding: 5px 10px 5px 10px;
+}
+
+#iEmail, #iSenha{
+	font-size: 17px;
+	padding-right: 254px;
+}
+
+#iRegister{
+	font-size: 20px;
+	font-family: 'Oswald', sans-serif;
+	margin-top: 15px;
+	padding: 5px 25px 5px 25px;
+	background-color: #394e3f;
+    color: #ddd;
+    border: none;
+    border-radius: 5px;
+}
+
+#iRegister:hover{
+	cursor: pointer;
+    color: rgb(243, 243, 243);
+	background-color: #1a271e;
+}

@@ -14,6 +14,8 @@
         <input type="checkbox" id="check">
         <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
 
+        <a th:href="@{/register}" id="buttom-Register">Criar uma conta</a>
+ 
         <div class="barra">
             <nav>
                 <ul class="menu">
@@ -38,7 +40,7 @@
         </div>
 
     </header>
-
+    
     <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
 
     <ul class="menu-horizontal">
@@ -48,8 +50,17 @@
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
     
+    <form method="POST" th:action="@{contatos}" th:object="${calc}">
+    	N1: <input type="number" th:field="*{n1}"><br>
+    	N2: <input type="number" th:field="*{n2}">
+    	<input type="submit" name="Calcular">
+    </form>
+    
     <footer>
         Desenvolvido por: Caio Silva, Laryssa Lisboa e Lucas Beserra
+        <!-- <h1>Soma de dois números</h1>
+    	<div th:text="${'O resultado da soma é ' + Resultado}"></div> -->
+
     </footer>
 </body>
 
