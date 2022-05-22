@@ -21,12 +21,12 @@ public class PrincipalController {
 		return "sobre";
 	}
 	
-	@GetMapping("/register")
+	/*@GetMapping("/register")
 	public String register() {
 		return "register";
 	}
 	
-	/*@GetMapping("/contatos")
+	@GetMapping("/contatos")
 	public String contatos() {
 		return "contatos";
 	}*/

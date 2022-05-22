@@ -51,12 +51,12 @@
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
 
-    <form action="">
+    <form th:action="@{register}" method="POST" th:object="${usuario}">
     	<div id="formH1"> 
         	<h1>Crie uma conta</h1>
         	<p>Suas informações não serão compartilhadas com terceiros</p>
         </div>
-        <input type="text" name="nFirsName" id="iFirstName" required placeholder="Primeiro Nome">
+        <input type="text" name="nFirstName" id="iFirstName" required placeholder="Primeiro Nome">
         <input type="text" name="nLastName" id="iLastName" required placeholder="Último Nome"><br>
         <input type="email" name="nEmail" id="iEmail" required placeholder="Seu Email" height="1px"><br>
         <input type="password" name="nSenha" id="iSenha" required placeholder="Sua Nova Senha"><br>

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import com.example.model.Calculadora;
+import com.example.model.RegisterInfos;
 
 @Controller
 @ComponentScan("com.example.model")
@@ -25,5 +26,22 @@ public class FormController {
 		int soma = calc.somar();
 		model.addAttribute("resultado", soma);
 		return "calcsoma";
+	}
+	
+	//-------------Formulário de registro-------------
+	
+	@GetMapping("/register")
+	public String formRegister(Model model) {
+		model.addAttribute("usuario", new RegisterInfos(null, null, null, null));
+		return "register";
+	}
+	
+	@PostMapping("/register")
+	public String getUsuario(@ModelAttribute RegisterInfos usuario
+							,Model model) {
+		String infoUser = usuario.getInfoUsuario();
+		model.addAttribute("resultado", infoUser);
+		return "calcsoma";
+		
 	}
 }
