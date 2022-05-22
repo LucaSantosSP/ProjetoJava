@@ -1,4 +1,4 @@
-package com.example.AwareStuff;
+package com.sistema.awareProject;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
