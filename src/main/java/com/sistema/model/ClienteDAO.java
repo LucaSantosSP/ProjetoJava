@@ -21,7 +21,7 @@ public class ClienteDAO {
 	}
 	
 	public void inserirCliente(RegisterInfos cliente) {
-		String sql = "INSERT INTO cliente(firstName, lastName, email, senha)" + " VALUES (?,?,?,?)";
+		String sql = "INSERT INTO cliente (name, lastName, email, senha)" + " VALUES (?,?,?,?)";
 		
 		Object[] obj = new Object[4];
 		obj[0] = cliente.getnFirstName();

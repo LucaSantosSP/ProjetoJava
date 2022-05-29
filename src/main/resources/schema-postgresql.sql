@@ -1,7 +1,7 @@
-CREATE TABLE IF NOT EXIST cliente (
+CREATE TABLE IF NOT EXISTS cliente (
 	id serial PRIMARY KEY,
-	firstName varchar(20),
-	lasName varchar(20),
-	email varchar(50),
-	senha varchar(50)
+	name text,
+	lastname text,
+	email text,
+	senha text
 );
