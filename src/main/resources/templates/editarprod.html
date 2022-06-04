@@ -2,14 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awere Stuff | Contatos</title>
+    <title>Aware Stuff | Editar Produto</title>
     <link rel="stylesheet" th:href="@{CSS/main.css}">
+    <link rel="stylesheet" th:href="@{CSS/register.css}">
 </head>
 
 <body>
-        <header>
+    <header>
 
         <input type="checkbox" id="check">
         <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
@@ -52,11 +53,19 @@
         <li><a th:href="@{/produtos}">Produtos</a></li>
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
-    
-    <h1>Reultado da Soma</h1>
-    <h2 th:text="${resultado}"></h2>
-    
+
+	<form action="#" th:action="@{'/upd/' + ${id}}" method="post" th:object="${produto}"> 
+		<img th:src="@{Imagens/Foto.png}">
+		<h1 th:text="${'Atualização do produto: ' + nproduc}"></h1>
+		
+		Nome do produto: <input type="text" name="nProduc" id="iProduc" th:field="*{nProduc}" size="47"><br>
+        Descrição do produto: <textarea name="nDescricao" id="iDescricao" th:field="*{nDescricao}" cols="48" rows="4"></textarea><br>
+        Certificação sustentável produto: <input type="text" name="nSelo" id="iSelo" th:field="*{nSelo}" size="47" height="1px"><br>
+        Ponto de venda do produto: <input type="text" name="nPontoVenda" id="iPontoVenda" th:field="*{nPontoVenda}" size="47"><br>
+
+		<input type="submit" value="Editar">
+	</form >
+
 </body>
 
 </html>
-

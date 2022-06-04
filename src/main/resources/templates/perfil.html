@@ -2,14 +2,15 @@
 <html xmlns:th="http://www.thymeleaf.org" lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awere Stuff | Contatos</title>
+    <title>Awere Stuff | Meu Perfil</title>
     <link rel="stylesheet" th:href="@{CSS/main.css}">
+    <link rel="stylesheet" th:href="@{CSS/register.css}">
 </head>
 
 <body>
-        <header>
+    <header>
 
         <input type="checkbox" id="check">
         <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
@@ -52,11 +53,16 @@
         <li><a th:href="@{/produtos}">Produtos</a></li>
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
-    
-    <h1>Reultado da Soma</h1>
-    <h2 th:text="${resultado}"></h2>
-    
+
+	<main> 
+		<img th:src="@{Imagens/Foto.png}">
+		<h1 th:text="${'Perfil de ' + name + ' ' + lastname}"></h1>
+		<h2 th:text="${'Email: ' + email}"></h2>
+		<h2 th:text="${'Id: ' + id}"></h2>
+	
+		<a th:href="@{/registerproduct}">Registre um produto</a>
+	</main>
+
 </body>
 
 </html>
-

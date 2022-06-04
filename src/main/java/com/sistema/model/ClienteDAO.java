@@ -1,5 +1,7 @@
 package com.sistema.model;
 
+import java.util.Map;
+
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
@@ -29,5 +31,12 @@ public class ClienteDAO {
 		obj[2] = cliente.getnEmail();
 		obj[3] = cliente.getnSenha();
 		jbdc.update(sql, obj);
+	}
+	
+	public Map<String, Object> getCliente(int id){
+		String sql = "SELECT * FROM cliente WHERE cliente.id = ?";
+		Object[] obj = new Object[1];
+		obj[0] = id;
+		return jbdc.queryForMap(sql,obj);
 	}
 }

@@ -31,6 +31,9 @@
                     <a th:href="@{/contatos}">
                         <li>Contato</li>
                     </a>
+                    <a th:href="@{/perfil}">
+                        <li>Perfil</li>
+                    </a>
                 </ul>
             </nav>
         </div>
@@ -49,6 +52,41 @@
         <li><a th:href="@{/produtos}">Produtos</a></li>
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
+    
+    <main> 
+    	<table class="table-srtiped">
+    		<thead class="ttop">
+    			<tr class="table-info">
+    				<td><b> ID</b></td>
+    				<td><b> Produto</b></td>
+    				<td><b> Descrição</b></td>
+    				<td><b> Certificação Sustentável</b></td>
+    				<td><b> Ponto de venda</b></td>
+    				<td><b> </b></td>
+    				<td><b> </b></td>
+    			</tr>
+    		</thead>
+    		<tbody>
+    			<tr th:each="prod : ${produtos}">
+    				<td th:text="${prod.id}"></td>
+    				<td><a th:href="${'/produto/'+prod.id}" th:text="${prod.nproduc}"></a></td>
+    				<td th:text="${prod.ndescricao}"></td>
+    				<td th:text="${prod.nselo}"></td>
+    				<td th:text="${prod.npontovenda}"></td>
+    				<td>
+    					<a th:href="@{'upd/' + ${prod.id}}">
+    						Editar
+    					</a>
+    				</td>
+    				<td> 
+    					<form th:action="@{'apagar/produto/' + ${prod.id}}" method="post">
+    						<input type="submit" value="X">
+    					</form>
+    				</td>
+    			</tr>
+    		</tbody>
+    	</table >
+    </main>
     
     <footer>
         Desenvolvido por: Caio Silva, Laryssa Lisboa e Lucas Beserra

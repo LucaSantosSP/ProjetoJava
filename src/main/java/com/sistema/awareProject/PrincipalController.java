@@ -11,24 +11,9 @@ public class PrincipalController {
 		return "index";
 	}
 	
-	@GetMapping("/produtos")
-	public String produtos() {
-		return "produtos";
-	}
-	
 	@GetMapping("/sobre")
 	public String sobre() {
 		return "sobre";
 	}
-	
-	/*@GetMapping("/register")
-	public String register() {
-		return "register";
-	}
-	
-	@GetMapping("/contatos")
-	public String contatos() {
-		return "contatos";
-	}*/
 
 }

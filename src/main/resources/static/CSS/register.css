@@ -26,9 +26,15 @@ input{
     padding: 5px 10px 5px 10px;
 }
 
-#iEmail, #iSenha{
+#iEmail, #iSenha, #iProduc, #iSelo, #iPontoVenda{
 	font-size: 17px;
-	padding-right: 254px;
+	padding-right: 15px;
+}
+
+textarea{
+	font-size: 17px;
+	padding: 10px;
+	margin-bottom: 5px;
 }
 
 #iRegister{

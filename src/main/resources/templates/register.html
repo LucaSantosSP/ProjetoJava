@@ -32,6 +32,9 @@
                     <a th:href="@{/contatos}">
                         <li>Contato</li>
                     </a>
+                    <a th:href="@{/perfil}">
+                        <li>Perfil</li>
+                    </a>
                 </ul>
             </nav>
         </div>
@@ -58,8 +61,8 @@
         </div>
         <input type="text" name="nFirstName" id="iFirstName" th:field="*{nFirstName}" required placeholder="Primeiro Nome">
         <input type="text" name="nLastName" id="iLastName" th:field="*{nLastName}" required placeholder="Último Nome"><br>
-        <input type="email" name="nEmail" id="iEmail" th:field="*{nEmail}" required placeholder="Seu Email" height="1px"><br>
-        <input type="password" name="nSenha" id="iSenha" th:field="*{nSenha}" required placeholder="Sua Nova Senha"><br>
+        <input type="email" name="nEmail" id="iEmail" th:field="*{nEmail}" required placeholder="Seu Email" height="1px" size="47"><br>
+        <input type="password" name="nSenha" id="iSenha" th:field="*{nSenha}" required placeholder="Sua Nova Senha" size="47"><br>
 
         <input type="submit" value="Registrar" id="iRegister">
         

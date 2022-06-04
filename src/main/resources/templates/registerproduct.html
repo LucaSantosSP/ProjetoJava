@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Awere Stuff | Contatos</title>
+    <title>Awere Stuff | Registrar Produto</title>
     <link rel="stylesheet" th:href="@{CSS/main.css}">
+    <link rel="stylesheet" th:href="@{CSS/register.css}">
 </head>
 
 <body>
-        <header>
+    <header>
 
         <input type="checkbox" id="check">
         <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
@@ -52,11 +53,21 @@
         <li><a th:href="@{/produtos}">Produtos</a></li>
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
-    
-    <h1>Reultado da Soma</h1>
-    <h2 th:text="${resultado}"></h2>
-    
+
+    <form th:action="@{registerproduct}" method="POST" th:object="${product}">
+    	<div id="formH1"> 
+        	<h1>Registre um produto</h1>
+        	<p>Adicione o máximo de informações que você conseguir</p>
+        </div>
+        <input type="text" name="nProduc" id="iProduc" th:field="*{nProduc}" required placeholder="Nome do Produto" size="47"><br>
+        <textarea name="nDescricao" id="iDescricao" th:field="*{nDescricao}" cols="48" rows="4" required placeholder="Descrição detalhada do pruduto">bolinha de gude</textarea><br>
+        <input type="text" name="nSelo" id="iSelo" th:field="*{nSelo}" required placeholder="Certificações sustentáveis desse produto"  size="47" height="1px"><br>
+        <input type="text" name="nPontoVenda" id="iPontoVenda" th:field="*{nPontoVenda}" required placeholder="Ponto de venda desse produto" size="47"><br>
+
+        <input type="submit" value="Registrar" id="iRegister">
+        
+    </form>
+
 </body>
 
 </html>
-
