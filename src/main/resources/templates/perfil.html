@@ -5,15 +5,16 @@
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awere Stuff | Meu Perfil</title>
-    <link rel="stylesheet" th:href="@{CSS/main.css}">
-    <link rel="stylesheet" th:href="@{CSS/register.css}">
+    <link rel="stylesheet" th:href="@{/CSS/main.css}">
+    <link rel="stylesheet" th:href="@{/CSS/register.css}">
+    <link rel="stylesheet" th:href="@{/CSS/perfil.css}">
 </head>
 
 <body>
     <header>
 
         <input type="checkbox" id="check">
-        <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
+        <label id="icone" for="check"><img th:src="@{/Imagens/NavButtom.png}" alt="navegação"></label>
 
         <a th:href="@{/register}" id="buttom-Register">Criar uma conta</a>
  
@@ -40,12 +41,12 @@
         </div>
 
         <div id="logo-div">
-            <img id="logo" th:src="@{Imagens/Logo.png}" alt="Logo">
+            <img id="logo" th:src="@{/Imagens/Logo.png}" alt="Logo">
         </div>
 
     </header>
 
-    <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
+    <img id="banner" th:src="@{/Imagens/Banner.png}" alt="Banner">
 
     <ul class="menu-horizontal">
         <li><a th:href="@{/index}">Home</a></li>
@@ -55,12 +56,12 @@
     </ul>
 
 	<main> 
-		<img th:src="@{Imagens/Foto.png}">
-		<h1 th:text="${'Perfil de ' + name + ' ' + lastname}"></h1>
-		<h2 th:text="${'Email: ' + email}"></h2>
-		<h2 th:text="${'Id: ' + id}"></h2>
-	
-		<a th:href="@{/registerproduct}">Registre um produto</a>
+		<div class="conteudoPerfil">
+			<img th:src="@{/Imagens/Foto.png}">
+			<h1 th:text="${'Perfil de ' + name + ' ' + lastname}"></h1>
+			<h2 th:text="${'Email: ' + email}"></h2>
+			<a th:href="@{/registerproduct}" id="registrarProd">Registre um produto</a>
+		</div>
 	</main>
 
 </body>

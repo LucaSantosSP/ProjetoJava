@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awere Stuff | Contatos</title>
     <link rel="stylesheet" th:href="@{CSS/main.css}">
+    <link rel="stylesheet" th:href="@{CSS/register.css}">
 </head>
 
 <body>
@@ -53,18 +54,21 @@
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
     
-    <form method="POST" th:action="@{contatos}" th:object="${calc}">
-    	N1: <input type="number" th:field="*{n1}"><br>
-    	N2: <input type="number" th:field="*{n2}">
-    	<input type="submit" name="Calcular">
-    </form>
-    
-    <footer>
-        Desenvolvido por: Caio Silva, Laryssa Lisboa e Lucas Beserra
-        <!-- <h1>Soma de dois números</h1>
-    	<div th:text="${'O resultado da soma é ' + Resultado}"></div> -->
+    <form method="POST" >
+    	<div id="formH1"> 
+        	<h1>Fale Conosco</h1>
+        	<p>Tem alguma dúvida que gostaria de esclarecer com a gente?</p>
+        </div>
+        <input type="text" required placeholder="Seu Nome" size="47"><br>
+        <input type="email"required placeholder="Seu Email" height="1px" size="47"><br>
+        <input type="text" required placeholder="Assunto" size="47"><br>
+        <input type="tel" required placeholder="Seu telefone" size="47"><br>
+        <textarea cols="48" rows="4" required placeholder="Sua Mensagem"></textarea><br>
 
-    </footer>
+        <input type="submit" value="Enviar" id="iRegister">
+        
+    </form>
+
 </body>
 
 </html>

@@ -5,15 +5,16 @@
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aware Stuff | Editar Produto</title>
-    <link rel="stylesheet" th:href="@{CSS/main.css}">
-    <link rel="stylesheet" th:href="@{CSS/register.css}">
+    <link rel="stylesheet" th:href="@{/CSS/main.css}">
+    <link rel="stylesheet" th:href="@{/CSS/register.css}">
+    <link rel="stylesheet" th:href="@{/CSS/editarform.css}">
 </head>
 
 <body>
     <header>
 
         <input type="checkbox" id="check">
-        <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
+        <label id="icone" for="check"><img th:src="@{/Imagens/NavButtom.png}" alt="navegação"></label>
 
         <a th:href="@{/register}" id="buttom-Register">Criar uma conta</a>
  
@@ -40,12 +41,12 @@
         </div>
 
         <div id="logo-div">
-            <img id="logo" th:src="@{Imagens/Logo.png}" alt="Logo">
+            <img id="logo" th:src="@{/Imagens/Logo.png}" alt="Logo">
         </div>
 
     </header>
 
-    <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
+    <img id="banner" th:src="@{/Imagens/Banner.png}" alt="Banner">
 
     <ul class="menu-horizontal">
         <li><a th:href="@{/index}">Home</a></li>
@@ -55,15 +56,21 @@
     </ul>
 
 	<form action="#" th:action="@{'/upd/' + ${id}}" method="post" th:object="${produto}"> 
-		<img th:src="@{Imagens/Foto.png}">
-		<h1 th:text="${'Atualização do produto: ' + nproduc}"></h1>
+		<h1>Atualização do produto</h1>
 		
-		Nome do produto: <input type="text" name="nProduc" id="iProduc" th:field="*{nProduc}" size="47"><br>
-        Descrição do produto: <textarea name="nDescricao" id="iDescricao" th:field="*{nDescricao}" cols="48" rows="4"></textarea><br>
-        Certificação sustentável produto: <input type="text" name="nSelo" id="iSelo" th:field="*{nSelo}" size="47" height="1px"><br>
-        Ponto de venda do produto: <input type="text" name="nPontoVenda" id="iPontoVenda" th:field="*{nPontoVenda}" size="47"><br>
+		<label for="iProduc" class="formLabel">Nome do produto: </label><br>
+		<input type="text" name="nProduc" id="iProduc" th:field="*{nProduc}" size="47"><br>
+		
+		<label for="iDescricao" class="formLabel">Descrição do produto: </label><br>
+        <textarea name="nDescricao" id="iDescricao" th:field="*{nDescricao}" cols="48" rows="4"></textarea><br>
+        
+        <label for="iSelo" class="formLabel">Certificação sustentável produto: </label><br>
+        <input type="text" name="nSelo" id="iSelo" th:field="*{nSelo}" size="47" height="1px"><br>
+        
+        <label for="iPontoVenda" class="formLabel">Ponto de venda do produto: </label><br>
+        <input type="text" name="nPontoVenda" id="iPontoVenda" th:field="*{nPontoVenda}" size="47"><br>
 
-		<input type="submit" value="Editar">
+		<input type="submit" value="Editar" id="iRegister">
 	</form >
 
 </body>

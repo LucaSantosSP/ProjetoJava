@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awere Stuff | Produtos</title>
     <link rel="stylesheet" th:href="@{CSS/main.css}">
+    <link rel="stylesheet" th:href="@{CSS/tabelaProd.css}">
 </head>
 
 <body>
@@ -54,38 +55,41 @@
     </ul>
     
     <main> 
+    <div>
     	<table class="table-srtiped">
     		<thead class="ttop">
     			<tr class="table-info">
     				<td><b> ID</b></td>
     				<td><b> Produto</b></td>
     				<td><b> Descrição</b></td>
-    				<td><b> Certificação Sustentável</b></td>
+    				<td id="dtSelo"><b> Certificação Sustentável</b></td>
     				<td><b> Ponto de venda</b></td>
     				<td><b> </b></td>
     				<td><b> </b></td>
     			</tr>
     		</thead>
     		<tbody>
-    			<tr th:each="prod : ${produtos}">
-    				<td th:text="${prod.id}"></td>
-    				<td><a th:href="${'/produto/'+prod.id}" th:text="${prod.nproduc}"></a></td>
-    				<td th:text="${prod.ndescricao}"></td>
-    				<td th:text="${prod.nselo}"></td>
-    				<td th:text="${prod.npontovenda}"></td>
+    			<tr th:each="prod : ${produtos}" class="trProduto">
+    				<td th:text="${prod.id}" class="tdID"></td>
+    				<td><a th:href="${'/produto/'+prod.id}" th:text="${prod.nproduc}" class="tdDescricao"></a></td>
+    				<td><a th:href="${'/produto/'+prod.id}" th:text="${prod.ndescricao}"  class="tdDescricao"></a></td>
+    				<td th:text="${prod.nselo}" class="tdProduto"></td>
+    				<td th:text="${prod.npontovenda}" class="tdProduto"></td>
     				<td>
-    					<a th:href="@{'upd/' + ${prod.id}}">
+    					<a th:href="@{'upd/' + ${prod.id}}" class="botEditar">
     						Editar
     					</a>
     				</td>
     				<td> 
     					<form th:action="@{'apagar/produto/' + ${prod.id}}" method="post">
-    						<input type="submit" value="X">
+    						<input type="submit" value="X" class="botExcluir">
     					</form>
     				</td>
     			</tr>
     		</tbody>
     	</table >
+    	<a th:href="@{/registerproduct}" id="registrarProd">Registre um produto</a>
+    </div>
     </main>
     
     <footer>

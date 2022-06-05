@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Awere Stuff | Sobre</title>
     <link rel="stylesheet" th:href="@{CSS/main.css}">
+    <link rel="stylesheet" th:href="@{CSS/sobre.css}">
 </head>
 
 <body>
@@ -53,9 +54,20 @@
         <li><a th:href="@{/contatos}">Contatos</a></li>
     </ul>
     
-    <footer>
-        Desenvolvido por: Caio Silva, Laryssa Lisboa e Lucas Beserra
-    </footer>
+    <main> 
+    	<div class="cont">
+    		<h1>Sobre o Aware Stuff</h1>
+    		<p id="sobreCont">O Awere Stuff é uma aplicação que identifica se um produto é feito de
+			forma consciente, como por exemplo: produtos com embalagem biodegradável,
+			não testado em animais, sustentáveis etc. O objetivo do aplicativo é ajudar e
+			incentivar todos os grupos de pessoas que estão dispostas a colaborarem com
+			o consumo consciente diminuindo o uso de produtos que agridam o meio
+			ambiente.</p>
+    	</div>
+    	<img th:src="@{Imagens/img-sustentabilidade.png}" class="cont">
+    </main>
+    
+   
 </body>
 
 </html>

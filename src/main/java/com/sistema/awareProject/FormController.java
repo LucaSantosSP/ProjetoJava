@@ -13,7 +13,7 @@ import com.sistema.model.Calculadora;
 @ComponentScan("com.sistema.model")
 public class FormController {
 	
-	@GetMapping("/contatos")
+	/*@GetMapping("/contatos")
 	public String formSoma(Model model) {
 		model.addAttribute("calc", new Calculadora(0, 0));
 		return "contatos";
@@ -25,5 +25,5 @@ public class FormController {
 		int soma = calc.somar();
 		model.addAttribute("resultado", soma);
 		return "calcsoma";
-	}
+	}*/
 }

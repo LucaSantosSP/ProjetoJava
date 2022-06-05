@@ -5,15 +5,16 @@
     <meta charset="ISO-8859-1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title th:text="${'Awere Stuff | ' + nproduc}"></title>
-    <link rel="stylesheet" th:href="@{CSS/main.css}">
-    <link rel="stylesheet" th:href="@{CSS/register.css}">
+    <link rel="stylesheet" th:href="@{/CSS/main.css}">
+    <link rel="stylesheet" th:href="@{/CSS/register.css}">
+    <link rel="stylesheet" th:href="@{/CSS/apresenta.css}">
 </head>
 
 <body>
     <header>
 
         <input type="checkbox" id="check">
-        <label id="icone" for="check"><img th:src="@{Imagens/NavButtom.png}" alt="navegação"></label>
+        <label id="icone" for="check"><img th:src="@{/Imagens/NavButtom.png}" alt="navegação"></label>
 
         <a th:href="@{/register}" id="buttom-Register">Criar uma conta</a>
  
@@ -40,12 +41,12 @@
         </div>
 
         <div id="logo-div">
-            <img id="logo" th:src="@{Imagens/Logo.png}" alt="Logo">
+            <img id="logo" th:src="@{/Imagens/Logo.png}" alt="Logo">
         </div>
 
     </header>
 
-    <img id="banner" th:src="@{Imagens/Banner.png}" alt="Banner">
+    <img id="banner" th:src="@{/Imagens/Banner.png}" alt="Banner">
 
     <ul class="menu-horizontal">
         <li><a th:href="@{/index}">Home</a></li>
@@ -55,14 +56,23 @@
     </ul>
 
 	<main> 
-		<img th:src="@{Imagens/Foto.png}">
-		<h1 th:text="${nproduc}"></h1>
-		<h2>Sobre esse produto</h2>
-		<p th:text="${ndescricao}"></p>
-		<p th:text="${'Certificações sustentáveis: ' + nselo}"></p>
-		<p th:text="${'Pontos de venda: ' + npontovenda}"></p>
+		<div class="Foto">
+			<img th:src="@{/Imagens/FotoProd.png}" id="produtoImagem"><br>
+		</div>
+		<div class="descricao">
+			<h1 th:text="${nproduc}"></h1><br>
+			<p th:text="${ndescricao}"></p>
+			<p style="visibility: hidden; ">abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz abcdefghijklmnopqrstuvwxyz</p>
+		</div>
+		<div class="pontoVenda">
+			<h2>Pontos de venda</h2>
+			
+			<p th:text="${npontovenda}"></p>
+			<strong>Certificações sustentáveis:</strong><p th:text="${nselo}"></p>
+			<p style="visibility: hidden;">abcdefghijklmnopqrstuvwxyz</p>
 	
-		<a th:href="@{/registerproduct}">Registre um produto</a>
+			<a th:href="@{/registerproduct}" id="registrarProd">Registre um produto</a>
+		</div  >
 	</main>
 
 </body>

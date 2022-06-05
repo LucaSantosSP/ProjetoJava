@@ -1,0 +1,69 @@
+main{
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+table{
+	margin-bottom: 20px;
+}
+
+#dtSelo{
+	min-width: 200px;
+	padding-top: 10px;
+}
+
+.tdID{
+	text-align: center;
+}
+
+td{
+	padding: 5px;
+}
+
+.trProduto{
+	background-color: rgb(241, 245, 242);
+	border-radius: 4x;
+}
+
+.tdProduto, .tdDescricao{
+	color: black;
+	padding-top: 10px;
+	margin-right:10px;
+	text-decoration: none;
+}
+
+.tdDescricao:hover{
+	color: rgb(35, 48, 38);
+}
+
+.botExcluir, .botEditar, #registrarProd{
+	text-decoration: none;	
+	font-family: 'Oswald', sans-serif;
+	margin-left: 5px;
+	padding: 5px 15px 5px 15px;
+	background-color: #394e3f;
+    color: #ddd;
+    border: none;
+    border-radius: 5px;
+}
+
+.botExcluir:hover, .botEditar:hover, #registrarProd:hover{
+	cursor: pointer;
+    color: rgb(243, 243, 243);
+	background-color: #1a271e;
+}
+
+.botEditar{
+	margin-left: 5px;
+	padding: 3px 15px 3px 15px;
+}
+
+#registrarProd{
+	float: left;
+}
+
+footer{
+	margin-top: 20px;
+}
+
+
